@@ -1,0 +1,29 @@
+{
+  "name": "line-login-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 startOrRestart process.yml",
+    "pause": "pm2 stop process.yml",
+    "restart": "pm2 restart process.yml",
+    "stop": "pm2 delete process.yml",
+    "logs": "pm2 logs",
+    "develop": "pm2 startOrRestart process.yml && pm2 logs",
+    "clearport": "kill $(lsof -t -i:3000)"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "pm2": "^4.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/register": "^7.12.1",
+    "eslint-config-nss": "^1.1.8"
+  }
+}
